@@ -2,25 +2,38 @@
   <q-layout view="lHh Lpr lFf">
     <q-header elevated>
       <q-toolbar class="bg-white">
-        <q-toolbar-title>
-          <q-img
-            src="../assets/logo_kwoka.png"
-            class="q-ma-md"
-            @click="allerVers('/')"
-            style="width=100%; height: auto; max-width: 200px; min-height: 35px"
-          />
+        <q-toolbar-title class="q-pa-md">
+          <router-link name="accueil" :to="'/accueil'" label="Accueil">
+            <q-img
+              v-if="$q.screen.gt.xs"
+              src="../assets/logo_kwoka.png"
+              :to="'/accueil'"
+              style="width=100%; height: auto; max-width: 200px; min-width:125px; min-height: 35px; cursor: pointer"
+            />
+            <q-img
+              v-else
+              src="../assets/sigle_kwoka.png"
+              :to="'/accueil'"
+              style="width=100%; height: auto; max-width: 59px; min-width:40px ; min-height: 35px; cursor: pointer"
+            />
+          </router-link>
         </q-toolbar-title>
         <q-tabs v-model="tab" class="text-green">
-          <q-tab name="accueil" label="Accueil" @click="allerVers('/')" />
-          <q-tab
-            name="listeActivite"
-            label="Activités"
-            @click="allerVers('listeActivite')"
+          <q-route-tab
+            default
+            name="accueil"
+            :to="'/accueil'"
+            label="Accueil"
           />
-          <q-tab
+          <q-route-tab
+            name="listeActivite"
+            :to="'/listeActivite'"
+            label="Activités"
+          />
+          <q-route-tab
             name="listeLogement"
+            :to="'/listeLogement'"
             label="Logements"
-            @click="allerVers('listeLogement')"
           />
         </q-tabs>
       </q-toolbar>
@@ -33,7 +46,6 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import { useRouter } from 'vue-router';
 import { ref } from 'vue';
 
 export default defineComponent({
@@ -42,12 +54,7 @@ export default defineComponent({
   components: {},
 
   setup() {
-    const $router = useRouter();
     return {
-      allerVers(route: string) {
-        void $router.push(route);
-      },
-
       tab: ref('accueil'),
     };
   },

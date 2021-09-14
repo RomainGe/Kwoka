@@ -3,23 +3,8 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, PropType, computed, ref, toRef, Ref } from 'vue';
+import { defineComponent, PropType } from 'vue';
 import { Todo, Meta } from './models';
-
-function useClickCount() {
-  const clickCount = ref(0);
-  function increment() {
-    clickCount.value += 1;
-    return clickCount.value;
-  }
-
-  return { clickCount, increment };
-}
-
-function useDisplayTodo(todos: Ref<Todo[]>) {
-  const todoCount = computed(() => todos.value.length);
-  return { todoCount };
-}
 
 export default defineComponent({
   name: 'CompositionComponent',
@@ -39,9 +24,6 @@ export default defineComponent({
     active: {
       type: Boolean,
     },
-  },
-  setup(props) {
-    return { ...useClickCount(), ...useDisplayTodo(toRef(props, 'todos')) };
   },
 });
 </script>

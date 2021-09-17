@@ -1,7 +1,10 @@
 <template>
-  <div class="q-ma-md">
-    <img src="../../assets/exemple-logement.png" />
-    <div class="text-h5">Lorem ipsum</div>
+  <div class="">
+    <img
+      src="../../assets/exemple-logement.png"
+      style="width: 100%; height: auto"
+    />
+    <div class="text-h6">Lorem ipsum dolor sit amet.</div>
     <div>Lorem ipsum</div>
   </div>
 </template>

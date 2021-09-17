@@ -1,1 +1,76 @@
 // app global css in SCSS form
+//Définition des couleurs de la charte graphique
+.text-primaire {
+    color: #00AA33;
+}
+
+.text-secondaire {
+    color: #273487;
+}
+
+.text-neutre {
+    color: #808080;
+}
+
+.text-gite {
+    color: #F2994A;
+}
+
+.text-woofing {
+    color: #F2C94C;
+}
+
+.text-cabane {
+    color: #27AE60;
+}
+
+.text-logement-insolite {
+    color: #2F80ED;
+}
+
+.text-chambre-hote {
+    color: #9B51E0;
+}
+
+.text-tiny-house {
+    color: #EB5757;
+}
+
+//
+//Définition des couleurs de la charte en tant que fond
+//
+.bg-primaire {
+    background: #00AA33;
+}
+
+.bg-secondaire {
+    background: #273487;
+}
+
+.bg-neutre {
+    background: #808080;
+}
+
+.bg-gite {
+    background: #F2994A;
+}
+
+.bg-woofing {
+    background: #F2C94C;
+}
+
+.bg-cabane {
+    background: #27AE60;
+}
+
+.bg-logement-insolite {
+    background: #2F80ED;
+}
+
+.bg-chambre-hote {
+    background: #9B51E0;
+}
+
+.bg-tiny-house {
+    background: #EB5757;
+}

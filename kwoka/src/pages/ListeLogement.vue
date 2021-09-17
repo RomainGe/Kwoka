@@ -1,25 +1,35 @@
 <template>
   <q-page class="row items-center justify-evenly" style="align-items: stretch">
-    <div class="row col-6">
-      <h4 class="col-12">Liste Logement</h4>
-      <card-logement
-        class="col-12 q-my-sm"
-        style="height: 300px"
-      ></card-logement>
-      <card-logement
-        class="col-12 q-my-sm"
-        style="height: 300px"
-      ></card-logement>
-      <card-logement
-        class="col-12 q-my-sm"
-        style="height: 300px"
-      ></card-logement>
-      <card-logement
-        class="col-12 q-my-sm"
-        style="height: 300px"
-      ></card-logement>
+    <div class="row col-md-6 col-12" style="padding: 30px 32px">
+      <div class="col-12 row" style="">
+        <div class="text-h4">Plougestan</div>
+        <div class="q-mx-sm" style="font-size: 2em">-</div>
+        <div class="q-pt-sm">17 oct. - 25 oct.</div>
+        <div class="q-mx-sm" style="font-size: 2em">-</div>
+        <div class="q-pt-sm">1 voyageur</div>
+      </div>
+      <div class="col-12">15 logements</div>
+      <card-logement class="col-12 q-my-sm"></card-logement>
+      <card-logement class="col-12 q-my-sm"></card-logement>
+      <card-logement class="col-12 q-my-sm"></card-logement>
+      <card-logement class="col-12 q-my-sm"></card-logement>
+      <card-logement class="col-12 q-my-sm"></card-logement>
+      <card-logement class="col-12 q-my-sm"></card-logement>
+      <card-logement class="col-12 q-my-sm"></card-logement>
+      <card-logement class="col-12 q-my-sm"></card-logement>
+      <card-logement class="col-12 q-my-sm"></card-logement>
+      <card-logement class="col-12 q-my-sm"></card-logement>
+      <card-logement class="col-12 q-my-sm"></card-logement>
+      <card-logement class="col-12 q-my-sm"></card-logement>
+      <card-logement class="col-12 q-my-sm"></card-logement>
+      <card-logement class="col-12 q-my-sm"></card-logement>
+      <card-logement class="col-12 q-my-sm"></card-logement>
     </div>
-    <div class="col-6" style="height: 100%; position: sticky; top: 92px">
+    <div
+      class="col-6"
+      style="height: 100%; position: sticky; top: 92px"
+      v-if="$q.screen.gt.sm"
+    >
       <GoogleMap
         api-key="AIzaSyASLkCpxk6Jm7ZpwpgIdj5E6tf-RYDHMWQ"
         style="width: 100%; height: 90vh"

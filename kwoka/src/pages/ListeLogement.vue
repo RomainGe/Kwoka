@@ -9,7 +9,10 @@
         <div class="q-pt-sm">1 voyageur</div>
       </div>
       <div class="col-12">15 logements</div>
-      <card-logement class="col-12 q-my-sm"></card-logement>
+      <card-logement
+        class="col-12 q-my-sm"
+        @click="voirDetails"
+      ></card-logement>
       <card-logement class="col-12 q-my-sm"></card-logement>
       <card-logement class="col-12 q-my-sm"></card-logement>
       <card-logement class="col-12 q-my-sm"></card-logement>
@@ -46,14 +49,22 @@
 import CardLogement from 'src/components/Logement/CardLogement.vue';
 import { defineComponent } from 'vue';
 import { GoogleMap, Marker } from 'vue3-google-map';
+import { useRouter, useRoute } from 'vue-router';
 
 export default defineComponent({
   components: { CardLogement, GoogleMap, Marker },
   name: 'ListeLogement',
-  setup() {
-    const center = { lat: 40.689247, lng: -74.044502 };
 
-    return { center };
+  setup() {
+    const Router = useRouter();
+
+    const center = { lat: 40.689247, lng: -74.044502 };
+    return {
+      center,
+      voirDetails() {
+        Router.push('/detailsLogement');
+      },
+    };
   },
 });
 </script>

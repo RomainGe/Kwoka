@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-floating-promises */
 <template>
   <q-page class="row items-center justify-evenly" style="align-items: stretch">
     <div class="row col-md-6 col-12" style="padding: 30px 32px">
@@ -49,7 +50,7 @@
 import CardLogement from 'src/components/Logement/CardLogement.vue';
 import { defineComponent } from 'vue';
 import { GoogleMap, Marker } from 'vue3-google-map';
-import { useRouter, useRoute } from 'vue-router';
+import { useRouter } from 'vue-router';
 
 export default defineComponent({
   components: { CardLogement, GoogleMap, Marker },
@@ -62,6 +63,7 @@ export default defineComponent({
     return {
       center,
       voirDetails() {
+        // eslint-disable-next-line @typescript-eslint/no-floating-promises
         Router.push('/detailsLogement');
       },
     };

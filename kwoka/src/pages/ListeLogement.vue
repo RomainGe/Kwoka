@@ -11,23 +11,41 @@
       </div>
       <div class="col-12">15 logements</div>
       <card-logement
-        class="col-12 q-my-sm"
+        class="col-12 q-my-sm card-logement"
         @click="voirDetails"
       ></card-logement>
-      <card-logement class="col-12 q-my-sm"></card-logement>
-      <card-logement class="col-12 q-my-sm"></card-logement>
-      <card-logement class="col-12 q-my-sm"></card-logement>
-      <card-logement class="col-12 q-my-sm"></card-logement>
-      <card-logement class="col-12 q-my-sm"></card-logement>
-      <card-logement class="col-12 q-my-sm"></card-logement>
-      <card-logement class="col-12 q-my-sm"></card-logement>
-      <card-logement class="col-12 q-my-sm"></card-logement>
-      <card-logement class="col-12 q-my-sm"></card-logement>
-      <card-logement class="col-12 q-my-sm"></card-logement>
-      <card-logement class="col-12 q-my-sm"></card-logement>
-      <card-logement class="col-12 q-my-sm"></card-logement>
-      <card-logement class="col-12 q-my-sm"></card-logement>
-      <card-logement class="col-12 q-my-sm"></card-logement>
+      <card-logement
+        class="col-12 q-my-sm card-logement"
+        @click="voirDetails"
+      ></card-logement>
+      <card-logement
+        class="col-12 q-my-sm card-logement"
+        @click="voirDetails"
+      ></card-logement
+      ><card-logement
+        class="col-12 q-my-sm card-logement"
+        @click="voirDetails"
+      ></card-logement
+      ><card-logement
+        class="col-12 q-my-sm card-logement"
+        @click="voirDetails"
+      ></card-logement
+      ><card-logement
+        class="col-12 q-my-sm card-logement"
+        @click="voirDetails"
+      ></card-logement
+      ><card-logement
+        class="col-12 q-my-sm card-logement"
+        @click="voirDetails"
+      ></card-logement
+      ><card-logement
+        class="col-12 q-my-sm card-logement"
+        @click="voirDetails"
+      ></card-logement
+      ><card-logement
+        class="col-12 q-my-sm card-logement"
+        @click="voirDetails"
+      ></card-logement>
     </div>
     <div
       class="col-6"
@@ -70,3 +88,9 @@ export default defineComponent({
   },
 });
 </script>
+<style scoped>
+.card-logement:hover {
+  background-color: lightgray;
+  cursor: pointer;
+}
+</style>

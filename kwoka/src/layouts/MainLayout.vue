@@ -49,9 +49,14 @@
             style="margin: 0 20px; padding: 0"
           />
         </q-tabs>
-        <div class="col text-right">
-          <q-btn flat color="green" label="Connexion" />
+        <!-- <div v-if="connecte == false" class="col text-right">
+          <q-btn flat color="green" label="Connexion" @click="login()"/>
           <q-btn color="green" label="Inscription" />
+        </div> -->
+        <div class="col text-right">
+          <q-avatar @click="versMonCompte()">
+            <img src="https://cdn.quasar.dev/img/boy-avatar.png">
+          </q-avatar>
         </div>
       </q-toolbar>
     </q-header>
@@ -117,7 +122,17 @@ export default defineComponent({
   setup() {
     return {
       tab: ref('accueil'),
+      connecte: false,
     };
+  },
+  methods:{
+    login(){
+      console.log(this.connecte)
+      this.connecte = true;
+    },
+    versMonCompte(){
+      this.$router.push('profil');
+    }
   },
 });
 </script>

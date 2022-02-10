@@ -219,7 +219,6 @@
 
 <script lang="ts">
 //import CardLogement from 'src/components/Logement/CardLogement.vue';
-import { defineComponent } from 'vue';
 import { ref } from 'vue';
 
 export default {

@@ -1,7 +1,7 @@
 <template>
   <q-layout view="lHh Lpr fff">
     <q-header class="shadow-2">
-      <q-toolbar class="row bg-white">
+      <q-toolbar class="row bg-white" style="height: 80px">
         <q-toolbar-title class="col-4 q-pa-md">
           <router-link name="accueil" :to="'/accueil'" label="Accueil">
             <q-img
@@ -43,7 +43,7 @@
           <q-route-tab
             class="tab"
             name="nousDecouvrir"
-            :to="'/listeLogement'"
+            :to="'/blog'"
             active-class="active-tab"
             label="Nous Découvrir"
             style="margin: 0 20px; padding: 0"

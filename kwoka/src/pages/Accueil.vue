@@ -3,11 +3,11 @@
         <div class="row q-mb-xl col-12 image-fond" style="height: calc(85vh - 92px); position: relative">
             <img src="../assets/vector1.png" class="" style="position: absolute; right: 0; top: 10%; width: 30%" />
             <div class="col-4 offset-2" style="
-                  display: flex;
-                  justify-content: center;
-                  align-content: center;
-                  flex-direction: column;
-                ">
+                      display: flex;
+                      justify-content: center;
+                      align-content: center;
+                      flex-direction: column;
+                    ">
                 <div class="text-h3 text-white">
                     <div class="text-h3 text-white">Redécouvrez</div>
                     <div class="row text-h3 text-white">
@@ -80,7 +80,7 @@
                         viverra at netus in. Ante dictumst dui dignissim amet, molestie sit ac quam leo. Ligula sed consequat ornare semper eget consectetur. A, interdum quam eu diam risus neque cum amet. Lacus, feugiat bibendum facilisi lectus faucibus sit
                         massa et in. Elit leo urna gravida quis in a.
                     </div>
-                    <div class="col text-bold text-white text-right" style="align-self: flex-end;cursor: pointer;" >
+                    <div class="col text-bold text-white text-right" style="align-self: flex-end;cursor: pointer;">
                         voir plus >
                     </div>
                 </div>
@@ -159,18 +159,31 @@ import FiltresRecherche from 'src/components/Accueil/FiltresRecherche.vue';
 import CardLogementAccueil from 'src/components/Accueil/CardLogementAccueil.vue';
 import CardActiviteAccueil from 'src/components/Accueil/CardActiviteAccueil.vue';
 import { defineComponent } from 'vue';
+import { useRouter } from 'vue-router'
 
 export default defineComponent({
     name: 'Accueil',
     components: { FiltresRecherche, CardLogementAccueil, CardActiviteAccueil },
+    setup() {
+        const Router = useRouter();
+
+        const center = { lat: 40.689247, lng: -74.044502 };
+        return {
+            center,
+            voirDetails() {
+                // eslint-disable-next-line @typescript-eslint/no-floating-promises
+                Router.push('/detailsLogement');
+            },
+        };
+    },
     methods: {
         deposerAnnonce() {
             this.$router.push('deposerAnnonce');
         },
-        versLogement(){
+        versLogement() {
             this.$router.push('listeLogement');
         },
-        versActivite(){
+        versActivite() {
             this.$router.push('listeActivite');
         }
     }

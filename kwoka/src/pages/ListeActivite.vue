@@ -10,42 +10,42 @@
         <div class="q-pt-sm">1 voyageur</div>
       </div>
       <div class="col-12">15 activités</div>
-      <card-logement
+      <card-activite
         class="col-12 q-my-sm card-logement"
         @click="voirDetails"
-      ></card-logement>
-      <card-logement
+      ></card-activite>
+      <card-activite
         class="col-12 q-my-sm card-logement"
         @click="voirDetails"
-      ></card-logement>
-      <card-logement
+      ></card-activite>
+      <card-activite
         class="col-12 q-my-sm card-logement"
         @click="voirDetails"
-      ></card-logement
-      ><card-logement
+      ></card-activite
+      ><card-activite
         class="col-12 q-my-sm card-logement"
         @click="voirDetails"
-      ></card-logement
-      ><card-logement
+      ></card-activite
+      ><card-activite
         class="col-12 q-my-sm card-logement"
         @click="voirDetails"
-      ></card-logement
-      ><card-logement
+      ></card-activite
+      ><card-activite
         class="col-12 q-my-sm card-logement"
         @click="voirDetails"
-      ></card-logement
-      ><card-logement
+      ></card-activite
+      ><card-activite
         class="col-12 q-my-sm card-logement"
         @click="voirDetails"
-      ></card-logement
-      ><card-logement
+      ></card-activite
+      ><card-activite
         class="col-12 q-my-sm card-logement"
         @click="voirDetails"
-      ></card-logement
-      ><card-logement
+      ></card-activite
+      ><card-activite
         class="col-12 q-my-sm card-logement"
         @click="voirDetails"
-      ></card-logement>
+      ></card-activite>
     </div>
     <div
       class="col-6"
@@ -65,13 +65,13 @@
 </template>
 
 <script lang="ts">
-import CardLogement from 'src/components/Logement/CardLogement.vue';
+import CardActivite from 'src/components/Activite/CardActivite.vue';
 import { defineComponent } from 'vue';
 import { GoogleMap, Marker } from 'vue3-google-map';
 import { useRouter } from 'vue-router';
 
 export default defineComponent({
-  components: { CardLogement, GoogleMap, Marker },
+  components: { CardActivite, GoogleMap, Marker },
   name: 'ListeActivite',
 
   setup() {

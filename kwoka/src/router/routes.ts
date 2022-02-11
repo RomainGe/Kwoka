@@ -5,7 +5,7 @@ const routes: RouteRecordRaw[] = [
     path: '/',
     component: () => import('layouts/MainLayout.vue'),
     children: [
-      { path: '/accueil', component: () => import('src/pages/Accueil.vue') },
+    { path: '/', component: () => import('src/pages/Accueil.vue') },
     { path: '/listeActivite', component: () => import('src/pages/ListeActivite.vue') },
     { path: '/blog', component: () => import('src/pages/Blog.vue') },
     { path: '/listeLogement', component: () => import('src/pages/ListeLogement.vue')},
@@ -13,6 +13,8 @@ const routes: RouteRecordRaw[] = [
     { path: '/profil', component: () => import('src/pages/Profil.vue')},
     { path: '/confidentialite', component: () => import('src/pages/Confidentialite.vue')},
     { path: '/deposerAnnonce', component: () => import('src/pages/DeposerAnnonce.vue')},
+    { path: '/parametreCompte', component: () => import('src/pages/ParametreCompte.vue')},
+    { path: '/messagerie', component: () => import('src/pages/Messagerie.vue')},
   ],
   },
 

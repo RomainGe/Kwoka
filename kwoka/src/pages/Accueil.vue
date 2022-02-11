@@ -28,7 +28,7 @@
                 <div class="text-h2 col-8 text-bold text-left text-green">
                     Logements
                 </div>
-                <div class="text-bold text-right col q-mt-md">Voir plus ></div>
+                <div class="text-bold text-right col q-mt-md" style="cursor: pointer;" @click="versLogement()">Voir plus ></div>
                 <div class="row col-12 q-mt-md" style="">
                     <card-logement-accueil class="col-md-3 col-4 q-pr-md"></card-logement-accueil>
                     <card-logement-accueil class="col-md-3 col-4 q-pr-md"></card-logement-accueil>
@@ -40,7 +40,7 @@
                 <div class="text-h2 col-8 text-bold text-left text-green">
                     Activités
                 </div>
-                <div class="text-bold text-right col q-mt-md">Voir plus ></div>
+                <div class="text-bold text-right col q-mt-md" style="cursor: pointer;" @click="versActivite()">Voir plus ></div>
                 <div class="row col-12 q-mt-md" style="">
                     <card-activite-accueil class="col-4 q-pr-md"></card-activite-accueil>
                     <card-activite-accueil class="col-4 q-pr-md"></card-activite-accueil>
@@ -80,7 +80,7 @@
                         viverra at netus in. Ante dictumst dui dignissim amet, molestie sit ac quam leo. Ligula sed consequat ornare semper eget consectetur. A, interdum quam eu diam risus neque cum amet. Lacus, feugiat bibendum facilisi lectus faucibus sit
                         massa et in. Elit leo urna gravida quis in a.
                     </div>
-                    <div class="col text-bold text-white text-right" style="align-self: flex-end">
+                    <div class="col text-bold text-white text-right" style="align-self: flex-end;cursor: pointer;" >
                         voir plus >
                     </div>
                 </div>
@@ -166,6 +166,12 @@ export default defineComponent({
     methods: {
         deposerAnnonce() {
             this.$router.push('deposerAnnonce');
+        },
+        versLogement(){
+            this.$router.push('listeLogement');
+        },
+        versActivite(){
+            this.$router.push('listeActivite');
         }
     }
 });

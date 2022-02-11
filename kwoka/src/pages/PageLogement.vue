@@ -4,8 +4,7 @@
       <div class="text-h5" style="font-weight: bold">
         Lorem Ipsum Dolor Sit Amet
         <q-badge color="red" align="middle" style="margin-left: 10px"
-          >Tiny House</q-badge
-        >
+          >Tiny House</q-badge>
       </div>
       <div class="col-12 q-mb-lg">1 chambres - 1 SDB</div>
     </div>
@@ -138,7 +137,7 @@
               Hôte Kwoka de longue date, je vous propose mes divers logements
               éco-responsables et autonomes en énergie. À très bientôt !
             </div>
-            <q-btn class="" rounded color="green" label="Contacter cet hôte" />
+            <q-btn class="" rounded color="green" label="Contacter cet hôte" @click="messagerie()"/>
           </div>
         </div>
       </div>
@@ -222,11 +221,16 @@
 import { ref } from 'vue';
 
 export default {
-  name: 'PageLogement',
-  setup() {
-    return {
-      note: ref(3),
-    };
-  },
+    name: 'PageLogement',
+    setup() {
+        return {
+            note: ref(3),
+        };
+    },
+    methods: {
+        messagerie() {
+            this.$router.push('messagerie');
+        }
+    }
 };
 </script>

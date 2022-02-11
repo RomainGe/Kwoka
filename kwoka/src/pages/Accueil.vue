@@ -17,7 +17,7 @@
                 </div>
                 <div class="row text-h5 text-white q-pt-md">
                     <div class="">
-                        Avec Kwoka arborez la région de manière éco-responsbale !
+                        Avec Kwoka arborez la région de manière éco-responsable !
                     </div>
                 </div>
             </div>

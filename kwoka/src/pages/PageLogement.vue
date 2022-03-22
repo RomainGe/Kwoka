@@ -228,12 +228,13 @@ export default {
         return {
             note: ref(3),
             Router,
+            async messagerie() {
+              await Router.push('/messagerie');
+            }
         };
     },
     methods: {
-        async messagerie() {
-            await this.Router.push("messagerie");
-        }
+        
     }
 };
 </script>

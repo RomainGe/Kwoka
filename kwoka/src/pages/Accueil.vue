@@ -178,14 +178,14 @@ export default defineComponent({
         };
     },
     methods: {
-        deposerAnnonce() {
-            this.Router.push('deposerAnnonce');
+        async deposerAnnonce() {
+            await this.Router.push('deposerAnnonce');
         },
-        versLogement() {
-            this.Router.push('listeLogement');
+        async versLogement() {
+            await this.Router.push('listeLogement');
         },
-        versActivite() {
-            this.Router.push('listeActivite');
+        async versActivite() {
+            await this.Router.push('listeActivite');
         }
     }
 });

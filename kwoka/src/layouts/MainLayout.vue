@@ -246,7 +246,7 @@ export default defineComponent({
     },
     computed: {
         masqueFooter() {
-            if (this.Router.currentRoute.value.path == "/messagerie") {
+            if (this.Router.currentRoute.value.path == '/messagerie') {
                 return true;
             } else {
                 return false;

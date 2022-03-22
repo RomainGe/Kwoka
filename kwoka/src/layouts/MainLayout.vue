@@ -237,11 +237,11 @@ export default defineComponent({
             console.log(this.connecte)
             this.connecte = true;
         },
-        versMonCompte() {
-            this.Router.push('profil');
+        async versMonCompte() {
+            await this.Router.push('profil');
         },
-        versParametre() {
-            this.Router.push('parametreCompte')
+        async versParametre() {
+            await this.Router.push('parametreCompte')
         }
     },
     computed: {

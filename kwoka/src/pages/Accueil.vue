@@ -3,11 +3,11 @@
         <div class="row q-mb-xl col-12 image-fond" style="height: calc(85vh - 92px); position: relative">
             <img src="../assets/vector1.png" class="" style="position: absolute; right: 0; top: 10%; width: 30%" />
             <div class="col-4 offset-2" style="
-                      display: flex;
-                      justify-content: center;
-                      align-content: center;
-                      flex-direction: column;
-                    ">
+                          display: flex;
+                          justify-content: center;
+                          align-content: center;
+                          flex-direction: column;
+                        ">
                 <div class="text-h3 text-white">
                     <div class="text-h3 text-white">Redécouvrez</div>
                     <div class="row text-h3 text-white">

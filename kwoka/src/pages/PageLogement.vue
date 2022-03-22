@@ -219,17 +219,20 @@
 <script lang="ts">
 //import CardLogement from 'src/components/Logement/CardLogement.vue';
 import { ref } from 'vue';
+import { useRouter } from 'vue-router';
 
 export default {
     name: 'PageLogement',
     setup() {
+    const Router = useRouter();
         return {
             note: ref(3),
+            Router,
         };
     },
     methods: {
-        messagerie() {
-            this.$router.push('messagerie');
+        async messagerie() {
+            await this.Router.push("messagerie");
         }
     }
 };

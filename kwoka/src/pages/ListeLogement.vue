@@ -80,9 +80,9 @@ export default defineComponent({
     const center = { lat: 40.689247, lng: -74.044502 };
     return {
       center,
-      voirDetails() {
+      async voirDetails() {
         // eslint-disable-next-line @typescript-eslint/no-floating-promises
-        Router.push('/detailsLogement');
+        await Router.push('/detailsLogement');
       },
     };
   },

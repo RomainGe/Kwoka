@@ -208,6 +208,7 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 import { ref } from 'vue';
+import { useRouter } from 'vue-router';
 
 export default defineComponent({
     name: 'MainLayout',
@@ -215,7 +216,10 @@ export default defineComponent({
     components: {},
 
     setup() {
+    const Router = useRouter();
+
         return {
+          Router,
             tab: ref('accueil'),
             connecte: false,
             connexion: ref(false),
@@ -234,15 +238,15 @@ export default defineComponent({
             this.connecte = true;
         },
         versMonCompte() {
-            this.$router.push('profil');
+            this.Router.push('profil');
         },
         versParametre() {
-            this.$router.push('parametreCompte')
+            this.Router.push('parametreCompte')
         }
     },
     computed: {
         masqueFooter() {
-            if (this.$router.currentRoute.value.path == "/messagerie") {
+            if (this.Router.currentRoute.value.path == "/messagerie") {
                 return true;
             } else {
                 return false;

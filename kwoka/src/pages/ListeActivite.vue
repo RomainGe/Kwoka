@@ -65,7 +65,7 @@
 </template>
 
 <script lang="ts">
-import CardActivite from 'src/components/Activite/CardActivite.vue';
+import CardActivite from '../components/Activite/CardActivite.vue';
 import { defineComponent } from 'vue';
 import { GoogleMap, Marker } from 'vue3-google-map';
 import { useRouter } from 'vue-router';

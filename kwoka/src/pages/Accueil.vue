@@ -169,6 +169,7 @@ export default defineComponent({
 
         const center = { lat: 40.689247, lng: -74.044502 };
         return {
+            Router,
             center,
             voirDetails() {
                 // eslint-disable-next-line @typescript-eslint/no-floating-promises
@@ -178,13 +179,13 @@ export default defineComponent({
     },
     methods: {
         deposerAnnonce() {
-            this.$router.push('deposerAnnonce');
+            this.Router.push('deposerAnnonce');
         },
         versLogement() {
-            this.$router.push('listeLogement');
+            this.Router.push('listeLogement');
         },
         versActivite() {
-            this.$router.push('listeActivite');
+            this.Router.push('listeActivite');
         }
     }
 });

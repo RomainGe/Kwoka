@@ -3,11 +3,11 @@
         <div class="row q-mb-xl col-12 image-fond" style="height: calc(85vh - 92px); position: relative">
             <img src="../assets/vector1.png" class="" style="position: absolute; right: 0; top: 10%; width: 30%" />
             <div class="col-4 offset-2" style="
-                          display: flex;
-                          justify-content: center;
-                          align-content: center;
-                          flex-direction: column;
-                        ">
+                                          display: flex;
+                                          justify-content: center;
+                                          align-content: center;
+                                          flex-direction: column;
+                                        ">
                 <div class="text-h3 text-white">
                     <div class="text-h3 text-white">Redécouvrez</div>
                     <div class="row text-h3 text-white">
@@ -21,45 +21,76 @@
                     </div>
                 </div>
             </div>
-            <filtres-recherche class="col-8 offset-2" style="position: absolute; bottom: -50px"></filtres-recherche>
+            <FiltresRecherche class="col-8 offset-2" style="position: absolute; bottom: -50px"></FiltresRecherche>
         </div>
         <div style="margin: 0 125px">
             <div class="row col-12 q-mt-xl">
-                <div class="text-h2 col-8 text-bold text-left text-green">
+                <div class="text-h2 col-8 text-bold text-left text-green raleway">
                     Logements
                 </div>
                 <div class="text-bold text-right col q-mt-md" style="cursor: pointer;" @click="versLogement()">Voir plus ></div>
                 <div class="row col-12 q-mt-md" style="">
-                    <card-logement-accueil class="col-md-3 col-4 q-pr-md"></card-logement-accueil>
-                    <card-logement-accueil class="col-md-3 col-4 q-pr-md"></card-logement-accueil>
-                    <card-logement-accueil class="col-md-3 col-4 q-pr-md"></card-logement-accueil>
-                    <card-logement-accueil v-if="$q.screen.gt.sm" class="col-3 q-pr-md"></card-logement-accueil>
+                    <div class="col-md-3 col-4 q-pr-md zoom" @click="versDetailLogement()">
+                        <img src="../assets/Logement1.png" style="width: 100%; height: auto" />
+                        <div class="text-h6">Lorem ipsum dolor sit amet.</div>
+                        <div>Lorem ipsum</div>
+                    </div>
+                    <div class="col-md-3 col-4 q-pr-md zoom">
+                        <img src="../assets/Logement2.png" style="width: 100%; height: auto" />
+                        <div class="text-h6">Lorem ipsum dolor sit amet.</div>
+                        <div>Lorem ipsum</div>
+                    </div>
+                    <div class="col-md-3 col-4 q-pr-md zoom">
+                        <img src="../assets/Logement3.png" style="width: 100%; height: auto" />
+                        <div class="text-h6">Lorem ipsum dolor sit amet.</div>
+                        <div>Lorem ipsum</div>
+                    </div>
+                    <div v-if="$q.screen.gt.sm" class="col-3 q-pr-md zoom">
+                        <img src="../assets/Logement4.png" style="width: 100%; height: auto" />
+                        <div class="text-h6">Lorem ipsum dolor sit amet.</div>
+                        <div>Lorem ipsum</div>
+                    </div>
                 </div>
             </div>
             <div class="row col-12 q-mt-xl">
-                <div class="text-h2 col-8 text-bold text-left text-green">
+                <div class="text-h2 col-8 text-bold text-left text-green raleway">
                     Activités
                 </div>
-                <div class="text-bold text-right col q-mt-md" style="cursor: pointer;" @click="versActivite()">Voir plus ></div>
+                <div class="text-bold text-right col q-mt-md " style="cursor: pointer;" @click="versActivite()">Voir plus ></div>
                 <div class="row col-12 q-mt-md" style="">
-                    <card-activite-accueil class="col-4 q-pr-md"></card-activite-accueil>
-                    <card-activite-accueil class="col-4 q-pr-md"></card-activite-accueil>
-                    <card-activite-accueil class="col-4 q-pr-md"></card-activite-accueil>
+                    <div class="col-4 q-pr-md text-white zoom" style="position: relative" @click="versDetailLogement()">
+                        <img src="../assets/Activite1.png" style="width: 100%; height: auto" />
+                        <div class="" style="position: absolute; bottom: 29px; left: 30px; font-size: 2vw">
+                            Découverte
+                        </div>
+                    </div>
+                    <div class="col-4 q-pr-md text-white zoom" style="position: relative" @click="versDetailLogement()">
+                        <img src="../assets/Activite2.png" style="width: 100%; height: auto" />
+                        <div class="" style="position: absolute; bottom: 29px; left: 30px; font-size: 2vw">
+                            Découverte
+                        </div>
+                    </div>
+                    <div class="col-4 q-pr-md text-white zoom" style="position: relative" @click="versDetailLogement()">
+                        <img src="../assets/Activite3.png" style="width: 100%; height: auto" />
+                        <div class="" style="position: absolute; bottom: 29px; left: 30px; font-size: 2vw">
+                            Découverte
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="row col-12" style="margin-top: 100px">
                 <div class="col-md-5 col-12">
                     <div class="text-bold" style="font-size: 52px">
-                        <div class="text-primaire">Lorem ipsum</div>
-                        <div class="text-primaire">dolor sit amet,</div>
-                        <div class="text-secondaire">consectetur adipiscing elit.</div>
+                        <div class="text-primaire raleway">Lorem ipsum</div>
+                        <div class="text-primaire raleway">dolor sit amet,</div>
+                        <div class="text-secondaire raleway">consectetur adipiscing elit.</div>
                     </div>
                     <div class="q-pt-md" style="font-size: 16px">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam nisl, aenean morbi nisl est. Sem ornare cras vitae purus. Purus vivamus eleifend imperdiet tristique lectus curabitur nunc quis justo. Blandit ut aliquam dignissim quam non ac aliquet proin.
                     </div>
                     <div class="row q-pt-xl">
                         <q-btn class="bg-primaire text-white col" label="Proposer un logement" style="font-size: 16px" @click="deposerAnnonce()" />
-                        <q-btn class="bg-secondaire text-white q-ml-lg col" label="Proposer une activité" style="font-size: 16px" />
+                        <q-btn class="bg-secondaire text-white q-ml-lg col" label="Proposer une activité" style="font-size: 16px" @click="deposerAnnonce()"/>
                     </div>
                 </div>
                 <div class="offset-md-1 col-md-6 col-12">
@@ -75,7 +106,7 @@
                     <div class="col text-right">
                         <img src="../assets/leaf-ecology-circle.png" />
                     </div>
-                    <div class="col-9 q-pt-md text-white" style="font-size: 16px">
+                    <div class="col-9 q-pt-md text-white raleway" style="font-size: 16px">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Neque, vel non in luctus consectetur sodales eu nunc. Donec sagittis, phasellus cursus facilisi quis morbi quis eu. Ut turpis bibendum ligula augue quis viverra quam. Fames nisi sed nec sit aliquam
                         viverra at netus in. Ante dictumst dui dignissim amet, molestie sit ac quam leo. Ligula sed consequat ornare semper eget consectetur. A, interdum quam eu diam risus neque cum amet. Lacus, feugiat bibendum facilisi lectus faucibus sit
                         massa et in. Elit leo urna gravida quis in a.
@@ -156,14 +187,12 @@
 
 <script lang="ts">
 import FiltresRecherche from 'src/components/Accueil/FiltresRecherche.vue';
-import CardLogementAccueil from 'src/components/Accueil/CardLogementAccueil.vue';
-import CardActiviteAccueil from 'src/components/Accueil/CardActiviteAccueil.vue';
 import { defineComponent } from 'vue';
 import { useRouter } from 'vue-router'
 
 export default defineComponent({
     name: 'Accueil',
-    components: { FiltresRecherche, CardLogementAccueil, CardActiviteAccueil },
+    components: { FiltresRecherche },
     setup() {
         const Router = useRouter();
 
@@ -186,6 +215,9 @@ export default defineComponent({
         },
         async versActivite() {
             await this.Router.push('listeActivite');
+        },
+        async versDetailLogement() {
+            await this.Router.push('detailsLogement');
         }
     }
 });
@@ -196,5 +228,13 @@ export default defineComponent({
     background-image: url('../assets/hero.png');
     background-repeat: no-repeat;
     background-size: cover;
+}
+.zoom {
+  transition: transform .2s; /* Animation */
+  margin: 0 auto;
+}
+
+.zoom:hover {
+  transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
 }
 </style>

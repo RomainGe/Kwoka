@@ -1,7 +1,8 @@
 <template>
   <div class="">
+    {{image}}
     <img
-      src="../../assets/exemple-logement.png"
+      src="'../../assets/'+'"
       style="width: 100%; height: auto"
     />
     <div class="text-h6">Lorem ipsum dolor sit amet.</div>
@@ -14,5 +15,8 @@ import { defineComponent } from 'vue';
 
 export default defineComponent({
   name: 'CardLogementAccueil',
+  props: {
+    image: String
+  },
 });
 </script>

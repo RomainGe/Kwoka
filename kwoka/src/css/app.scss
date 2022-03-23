@@ -1,5 +1,24 @@
 // app global css in SCSS form
 //Définition des couleurs de la charte graphique
+@font-face {
+    font-family: customfont;
+    src: url(./font/AvenirNextRegular.woff);
+}
+
+@font-face {
+    font-family: raleway;
+    src: url(./font/Raleway-Regular.ttf);
+}
+
+// declare a class which applies it
+.custom-font {
+    font-family: 'customfont';
+}
+
+.raleway {
+    font-family: 'raleway';
+}
+
 .text-primaire {
     color: #00AA33;
 }

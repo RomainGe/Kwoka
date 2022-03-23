@@ -1,5 +1,5 @@
 <template>
-  <q-layout view="hHh Lpr fff">
+  <q-layout view="hHh Lpr fff" class="custom-font">
     <q-header class="shadow-2">
       <q-toolbar class="row bg-white">
         <q-toolbar-title class="col-4 q-pa-md">
@@ -49,13 +49,13 @@
             style="margin: 0 20px; padding: 0"
           />
         </q-tabs>
-        <div class="col text-right">
+        <div class="col text-right" v-if="estConnecte == true">
             <q-avatar @click="versMonCompte()">
                 <img src="https://cdn.quasar.dev/img/boy-avatar.png">
             </q-avatar>
             <q-icon class="q-px-md" color="black" name="settings" size="38px" @click="versParametre()" />
         </div>
-        <div class="col text-right">
+        <div class="col text-right" v-if="estConnecte == false">
           <q-btn
             flat
             color="green"
@@ -93,7 +93,6 @@
           </div>
           <div class="q-py-xs" style="font-weight: 300">Missions & valeurs</div>
           <div class="q-py-xs" style="font-weight: 300">Qui sommes nous ?</div>
-          <div class="q-py-xs" style="font-weight: 300">Blabla</div>
         </div>
         <div class="col-3" style="padding: 0 20px">
           <div class="font-bold" style="font-size: 24px">Nous contacter</div>
@@ -150,6 +149,7 @@
           label="Connexion"
           type="submit"
           color="positive"
+          @click="login()"
         />
         <div class="offset-1 col-10">Mot de passe oublié</div>
       </q-card>
@@ -230,12 +230,13 @@ export default defineComponent({
             nom: null,
             prenom: null,
             birth: null,
+            estConnecte: false,
         };
     },
     methods: {
         login() {
-            console.log(this.connecte)
-            this.connecte = true;
+            this.connexion = false;
+            this.estConnecte = true;
         },
         async versMonCompte() {
             await this.Router.push('profil');

@@ -1,7 +1,7 @@
 <template>
   <q-page class="row items-center justify-evenly" style="align-items: stretch">
     <div class="offset-1 col-10 row" style="margin-top: 50px">
-      <div class="text-h5" style="font-weight: bold">
+      <div class="text-h5 raleway" style="font-weight: bold">
         Lorem Ipsum Dolor Sit Amet
         <q-badge color="red" align="middle" style="margin-left: 10px"
           >Tiny House</q-badge>
@@ -11,26 +11,26 @@
     <div class="col-12 row q-mb-lg" style="height: 400px; padding: 0 10%">
       <div class="col-4">
         <img
-          src="~assets/exemple-logement2.png"
+          src="~assets/Logement2.png"
           class="col"
           style="width: 100%; height: 400px"
         />
       </div>
       <div class="col-4">
         <img
-          src="~assets/exemple-logement2.png"
+          src="~assets/PhotoLogement2.png"
           class="col-12"
           style="width: 100%; height: 400px"
         />
       </div>
       <div class="col-4 row">
         <img
-          src="~assets/exemple-logement2.png"
+          src="~assets/PhotoLogement1.png"
           class="col-12"
           style="width: 100%; height: 200px"
         />
         <img
-          src="~assets/exemple-logement2.png"
+          src="~assets/PhotoLogement3.png"
           class="col-12"
           style="width: 100%; height: 200px"
         />
@@ -39,9 +39,9 @@
     <div class="offset-1 col-10 row q-mb-lg">
       <div class="row">
         <div class="col-8">
-          <div class="text-h6">Dolor Sit Amet</div>
+          <div class="text-h6 raleway text-bold">Dolor Sit Amet</div>
           <div class="q-mb-lg" style="font-weight: lighter">
-            <q-icon name="star_border" /> 4,9/5 (666 avis)
+            <q-icon name="star_border" /> 4,9/5 (566 avis)
           </div>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
@@ -65,7 +65,7 @@
         </div>
       </div>
       <div class="row">
-        <div class="text-h6 q-mb-lg">Équipements du logement</div>
+        <div class="text-h6 q-mb-lg raleway text-bold">Équipements du logement</div>
         <div class="row col-12">
           <div class="col-2 text-center">
             <q-icon
@@ -124,7 +124,7 @@
         </div>
       </div>
       <div class="col-12 q-mt-xl">
-        <div class="text-h6 q-mb-lg">À propos de votre hôte</div>
+        <div class="text-h6 q-mb-lg raleway text-bold">À propos de votre hôte</div>
         <div class="row">
           <img
             src="~assets/hote.png"
@@ -142,7 +142,7 @@
         </div>
       </div>
       <div class="col-12 q-mt-xl">
-        <div class="text-h6 q-mb-lg">Avis sur ce logement</div>
+        <div class="text-h6 q-mb-lg raleway text-bold">Avis sur ce logement</div>
         <div class="row q-pa-md shadow-3" style="width: 60vw">
           <img
             src="~assets/commentaire.png"

@@ -63,6 +63,34 @@
             luctus tristique.
           </p>
         </div>
+         <div class="col-2 shadow-4 q-pa-md">
+          <div class="q-mb-lg text-bold" style="font-size:24px">
+            {{titre}}
+          </div>
+          <div class="q-mb-lg text-bold row">
+            <div class="col-5" style="font-size:12px">
+              Arrivée
+              <q-input dense placeholder="Entrez une date" style="font-size:12px"></q-input>
+            </div>
+            <div class="col-5 offset-1" style="font-size:12px">
+              Départ
+              <q-input dense placeholder="Entrez une date" style="font-size:12px"></q-input>
+            </div>
+          </div>
+          <div class="q-mb-lg text-bold row">
+            <div class="col-12 text-left" style="font-size:12px">
+              Voyageurs
+            </div>
+            <div class="col-12 row items-center" style="font-size:12px">
+              <div class="col-2 text-center text-green" style="font-size:30px">-</div>
+              <q-input class="col-8" borderless type="number" dense placeholder="Ajouter des voyageurs" style="font-size:12px"></q-input>
+              <div class="col-2 text-center text-green" style="font-size:24px">+</div>
+            </div>
+          </div>
+          <div class="q-mb-lg text-bold text-center text-white">
+            <q-btn style="background:#00AA33">Voir les disponibilités</q-btn>
+          </div>
+        </div>
       </div>
       <div class="row">
         <div class="text-h6 q-mb-lg raleway text-bold">Équipements du logement</div>

@@ -91,7 +91,7 @@ export default defineComponent({
       center,
       async voirDetails(id:number) {
         // eslint-disable-next-line @typescript-eslint/no-floating-promises
-        await Router.push('/detailsActivite/'+id);
+        await Router.push(`/detailsActivite/${id}`);
       },
     };
   },

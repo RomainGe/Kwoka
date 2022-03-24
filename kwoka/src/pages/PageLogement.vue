@@ -243,7 +243,7 @@ export default defineComponent({
     let titre = null;
     let prix = null;
     let couleur = 'blue';
-    let image: string = '~assets/exemple-logement2.png';
+    let image = '~assets/exemple-logement2.png';
     let logement = listeLogement.find(x => x.id.toString() == Router.currentRoute.value.params.id);
     if(logement){
       titre = logement.Titre;

@@ -85,7 +85,7 @@ export default defineComponent({
     },
     methods: {
         async versDetailLogement(id:number) {
-            await this.Router.push('detailsLogement/'+id);
+            await this.Router.push(`detailsLogement/${id}`);
         }
     }
 });

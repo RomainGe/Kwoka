@@ -217,10 +217,10 @@ export default defineComponent({
             await this.Router.push('listeActivite');
         },
         async versDetailLogement(id: number) {
-            await this.Router.push('/detailsLogement/'+id);
+            await this.Router.push(`/detailsLogement/${id}`);
         },
         async versDetailActivite(id: number) {
-            await this.Router.push('/detailsActivite/'+id);
+            await this.Router.push(`/detailsActivite/${id}`);
         }
     }
 });

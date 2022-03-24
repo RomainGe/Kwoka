@@ -141,7 +141,7 @@
 
         <q-card-section class="offset-1 col-10">
           <q-input dense v-model="email" label="Adresse Mail" />
-          <q-input dense v-model="password" label="Mot de Passe" />
+          <q-input dense v-model="password" label="Mot de Passe" type="password" />
           <q-checkbox v-model="check" label="Se souvenir de moi" />
         </q-card-section>
         <q-btn

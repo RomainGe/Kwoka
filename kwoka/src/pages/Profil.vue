@@ -18,27 +18,12 @@
                 Logements et activités proposés
             </div>
             <div class="q-pa-xl row">
-                <div class="col-4">
-                    <img src="../assets/aviron.png" style="width:200px;height:196px">
-                    <div class="text-bold" style="font-size: 16px">
-                        Aviron
-                    </div>
-                </div>
-                <div class="col-4">
-                    <img src="../assets/aviron.png" style="width:200px;height:196px">
-                    <div class="text-bold" style="font-size: 16px">
-                        Aviron
-                    </div>
-                </div>
-                <div class="col-4">
-                    <img src="../assets/aviron.png" style="width:200px;height:196px">
-                    <div class="text-bold" style="font-size: 16px">
-                        Aviron
-                    </div>
-                </div>
+                <card-activite class="col-12 zoom" :id="1" @click="versDetailLogement(1)"></card-activite>
+                <card-activite class="col-12 zoom" :id="2" @click="versDetailLogement(2)"></card-activite>
+                <card-activite class="col-12 zoom" :id="3" @click="versDetailLogement(3)"></card-activite>
             </div>
             <div style="font-size:32px; margin-top:80px">
-                Avis laissés (2)
+                Avis laissés (3)
             </div>
             <div class="row">
                 <div class="row q-pa-md shadow-3 q-mt-lg" style="width: 60vw">
@@ -84,19 +69,37 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
+import { useRouter } from 'vue-router'
+import CardActivite from '../components/Activite/CardActivite.vue';
 
 export default defineComponent({
-    components: {},
+    components: {CardActivite},
     name: 'Profil',
 
     setup() {
+        const Router = useRouter();
         return {
-          note: 2,
+            Router,
+            note: 2,
         };
     },
+    methods: {
+        async versDetailLogement(id:number) {
+            await this.Router.push('detailsLogement/'+id);
+        }
+    }
 });
 </script>
 
 <style scoped>
+.zoom {
+    transition: transform .2s;
+    /* Animation */
+    margin: 0 auto;
+}
 
+.zoom:hover {
+    transform: scale(1.1);
+    /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
 </style>

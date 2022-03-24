@@ -8,15 +8,15 @@
                                           align-content: center;
                                           flex-direction: column;
                                         ">
-                <div class="text-h3 text-white">
-                    <div class="text-h3 text-white">Redécouvrez</div>
-                    <div class="row text-h3 text-white">
+                <div class="text-h3 text-white text-bold">
+                    <div class="text-h3 text-white text-bold">Redécouvrez</div>
+                    <div class="row text-h3 text-white text-bold">
                         la
-                        <div class="text-green q-ml-sm">Bretagne...</div>
+                        <div class="text-green q-ml-sm text-bold">Bretagne...</div>
                     </div>
                 </div>
                 <div class="row text-h5 text-white q-pt-md">
-                    <div class="">
+                    <div class="text-bold">
                         Avec Kwoka arborez la région de manière éco-responsable !
                     </div>
                 </div>
@@ -30,22 +30,22 @@
                 </div>
                 <div class="text-bold text-right col q-mt-md" style="cursor: pointer;" @click="versLogement()">Voir plus ></div>
                 <div class="row col-12 q-mt-md" style="">
-                    <div class="col-md-3 col-4 q-pr-md zoom" @click="versDetailLogement()">
+                    <div class="col-md-3 col-4 q-pr-md zoom" @click="versDetailLogement(2)">
                         <img src="../assets/Logement1.png" style="width: 100%; height: auto" />
                         <div class="text-h6">Lorem ipsum dolor sit amet.</div>
                         <div>Lorem ipsum</div>
                     </div>
-                    <div class="col-md-3 col-4 q-pr-md zoom">
+                    <div class="col-md-3 col-4 q-pr-md zoom" @click="versDetailLogement(0)">
                         <img src="../assets/Logement2.png" style="width: 100%; height: auto" />
                         <div class="text-h6">Lorem ipsum dolor sit amet.</div>
                         <div>Lorem ipsum</div>
                     </div>
-                    <div class="col-md-3 col-4 q-pr-md zoom">
+                    <div class="col-md-3 col-4 q-pr-md zoom" @click="versDetailLogement(3)">
                         <img src="../assets/Logement3.png" style="width: 100%; height: auto" />
                         <div class="text-h6">Lorem ipsum dolor sit amet.</div>
                         <div>Lorem ipsum</div>
                     </div>
-                    <div v-if="$q.screen.gt.sm" class="col-3 q-pr-md zoom">
+                    <div v-if="$q.screen.gt.sm" class="col-3 q-pr-md zoom" @click="versDetailLogement(1)">
                         <img src="../assets/Logement4.png" style="width: 100%; height: auto" />
                         <div class="text-h6">Lorem ipsum dolor sit amet.</div>
                         <div>Lorem ipsum</div>
@@ -58,19 +58,19 @@
                 </div>
                 <div class="text-bold text-right col q-mt-md " style="cursor: pointer;" @click="versActivite()">Voir plus ></div>
                 <div class="row col-12 q-mt-md" style="">
-                    <div class="col-4 q-pr-md text-white zoom" style="position: relative" @click="versDetailLogement()">
+                    <div class="col-4 q-pr-md text-white zoom" style="position: relative" @click="versDetailActivite(0)">
                         <img src="../assets/Activite1.png" style="width: 100%; height: auto" />
                         <div class="" style="position: absolute; bottom: 29px; left: 30px; font-size: 2vw">
                             Découverte
                         </div>
                     </div>
-                    <div class="col-4 q-pr-md text-white zoom" style="position: relative" @click="versDetailLogement()">
+                    <div class="col-4 q-pr-md text-white zoom" style="position: relative" @click="versDetailActivite(1)">
                         <img src="../assets/Activite2.png" style="width: 100%; height: auto" />
                         <div class="" style="position: absolute; bottom: 29px; left: 30px; font-size: 2vw">
                             Découverte
                         </div>
                     </div>
-                    <div class="col-4 q-pr-md text-white zoom" style="position: relative" @click="versDetailLogement()">
+                    <div class="col-4 q-pr-md text-white zoom" style="position: relative" @click="versDetailActivite(2)">
                         <img src="../assets/Activite3.png" style="width: 100%; height: auto" />
                         <div class="" style="position: absolute; bottom: 29px; left: 30px; font-size: 2vw">
                             Découverte
@@ -81,9 +81,9 @@
             <div class="row col-12" style="margin-top: 100px">
                 <div class="col-md-5 col-12">
                     <div class="text-bold" style="font-size: 52px">
-                        <div class="text-primaire raleway">Lorem ipsum</div>
-                        <div class="text-primaire raleway">dolor sit amet,</div>
-                        <div class="text-secondaire raleway">consectetur adipiscing elit.</div>
+                        <div class="text-primaire raleway">Un logement</div>
+                        <div class="text-primaire raleway">disponible ?</div>
+                        <div class="text-secondaire raleway">N'hésitez plus !</div>
                     </div>
                     <div class="q-pt-md" style="font-size: 16px">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam nisl, aenean morbi nisl est. Sem ornare cras vitae purus. Purus vivamus eleifend imperdiet tristique lectus curabitur nunc quis justo. Blandit ut aliquam dignissim quam non ac aliquet proin.
@@ -101,7 +101,7 @@
                 <img src="../assets/nature.png" class="col-5 q-pr-md" />
                 <div class="row col-7 q-pa-xl">
                     <div class="col-9 text-white" style="font-size: 32px">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Une démarche portée sur l'environnement
                     </div>
                     <div class="col text-right">
                         <img src="../assets/leaf-ecology-circle.png" />
@@ -124,7 +124,7 @@
                 </div>
                 <div class="row" style="margin: 100px 110px 0 110px">
                     <div class="row col-4 q-px-md" style="display: flex; align-items: center; justify-content: center">
-                        <img src="../assets/co2-square.png" class="col q-pr-md" style="max-width: 90px" />
+                        <img src="../assets/earth-home-world-warming.svg" class="col q-pr-md" style="max-width: 90px" />
                         <div class="text-primaire col-12 q-pt-md" style="font-size: 32px">
                             lorem ipsum
                         </div>
@@ -133,7 +133,7 @@
                         </div>
                     </div>
                     <div class="row col-4 q-px-md" style="display: flex; align-items: center; justify-content: center">
-                        <img src="../assets/co2-square.png" class="col q-pr-md" style="max-width: 90px" />
+                        <img src="../assets/apple.svg" class="col q-pr-md" style="max-width: 90px" />
                         <div class="text-primaire col-12 q-pt-md" style="font-size: 32px">
                             lorem ipsum
                         </div>
@@ -142,7 +142,7 @@
                         </div>
                     </div>
                     <div class="row col-4 q-px-md" style="display: flex; align-items: center; justify-content: center">
-                        <img src="../assets/co2-square.png" class="col q-pr-md" style="max-width: 90px" />
+                        <img src="../assets/Heart.svg" class="col q-pr-md" style="max-width: 90px" />
                         <div class="text-primaire col-12 q-pt-md" style="font-size: 32px">
                             lorem ipsum
                         </div>
@@ -153,7 +153,7 @@
                 </div>
                 <div class="row" style="margin: 100px 110px 100px 110px">
                     <div class="row col-4 q-px-md" style="display: flex; align-items: center; justify-content: center">
-                        <img src="../assets/co2-square.png" class="col q-pr-md" style="max-width: 90px" />
+                        <img src="../assets/leaf-home-ecology.svg" class="col q-pr-md" style="max-width: 90px" />
                         <div class="text-primaire col-12 q-pt-md" style="font-size: 32px">
                             lorem ipsum
                         </div>
@@ -171,7 +171,7 @@
                         </div>
                     </div>
                     <div class="row col-4 q-px-md" style="display: flex; align-items: center; justify-content: center">
-                        <img src="../assets/co2-square.png" class="col q-pr-md" style="max-width: 90px" />
+                        <img src="../assets/Yang.svg" class="col q-pr-md" style="max-width: 90px" />
                         <div class="text-primaire col-12 q-pt-md" style="font-size: 32px">
                             lorem ipsum
                         </div>
@@ -216,8 +216,11 @@ export default defineComponent({
         async versActivite() {
             await this.Router.push('listeActivite');
         },
-        async versDetailLogement() {
-            await this.Router.push('detailsLogement');
+        async versDetailLogement(id: number) {
+            await this.Router.push('/detailsLogement/'+id);
+        },
+        async versDetailActivite(id: number) {
+            await this.Router.push('/detailsActivite/'+id);
         }
     }
 });

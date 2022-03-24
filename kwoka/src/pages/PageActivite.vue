@@ -64,65 +64,6 @@
           </p>
         </div>
       </div>
-      <div class="row">
-        <div class="text-h6 q-mb-lg raleway text-bold">Équipements du logement</div>
-        <div class="row col-12">
-          <div class="col-2 text-center">
-            <q-icon
-              class="col-12"
-              color="green"
-              name="tv"
-              style="font-size: 2rem"
-            />
-            <div class="col-12">Télévision</div>
-          </div>
-          <div class="col-2 text-center">
-            <q-icon
-              class="col-12"
-              color="green"
-              name="wifi"
-              style="font-size: 2rem"
-            />
-            <div class="col-12">Wifi</div>
-          </div>
-          <div class="col-2 text-center">
-            <q-icon
-              class="col-12"
-              color="green"
-              name="local_laundry_service"
-              style="font-size: 2rem"
-            />
-            <div class="col-12">Lave-linge</div>
-          </div>
-          <div class="col-2 text-center">
-            <q-icon
-              class="col-12"
-              color="green"
-              name="restaurant"
-              style="font-size: 2rem"
-            />
-            <div class="col-12">Cuisine</div>
-          </div>
-          <div class="col-2 text-center">
-            <q-icon
-              class="col-12"
-              color="green"
-              name="kitchen"
-              style="font-size: 2rem"
-            />
-            <div class="col-12">Réfrigerateur</div>
-          </div>
-          <div class="col-2 text-center">
-            <q-icon
-              class="col-12"
-              color="green"
-              name="microwave"
-              style="font-size: 2rem"
-            />
-            <div class="col-12">Micro-onde</div>
-          </div>
-        </div>
-      </div>
       <div class="col-12 q-mt-xl">
         <div class="text-h6 q-mb-lg raleway text-bold">À propos de votre hôte</div>
         <div class="row">
@@ -142,7 +83,7 @@
         </div>
       </div>
       <div class="col-12 q-mt-xl">
-        <div class="text-h6 q-mb-lg raleway text-bold">Avis sur ce logement</div>
+        <div class="text-h6 q-mb-lg raleway text-bold">Avis sur cette activité</div>
         <div class="row q-pa-md shadow-3" style="width: 60vw">
           <img
             src="~assets/commentaire.png"
@@ -217,26 +158,25 @@
 </template>
 
 <script lang="ts">
-//import CardLogement from 'src/components/Logement/CardLogement.vue';
 import { ref } from 'vue';
 import { useRouter } from 'vue-router';
 import { defineComponent } from 'vue';
 
 export default defineComponent({
-    name: 'PageLogement',
+    name: 'PageActivite',
     setup() {
     const Router = useRouter();
-    const listeLogement = [
-      {id: 0, Label: "Tiny House", Titre: "Tiny House près de la plage", Prix: "55", Couleur:'#EB5757', Image:'exemple_logement2.png'},
-      {id: 1, Label: "Woofing", Titre: "Ferme tranquille dans les terres", Prix: "55", Couleur:'#F2C94C', Image:'exemple_logement4.png'},
-      {id: 2, Label: "Chambre", Titre: "Super pied à terre à Saint-Malo", Prix: "55", Couleur:'#9B51E0', Image:'exemple_logement1.png'},
-      {id: 3, Label: "Cabane", Titre: "Cabane face à la mer", Prix: "55", Couleur:'#27AE60', Image:'exemple_logement3.png'},
-      {id: 4, Label: "Insolite", Titre: "Super dôme en pleine nature !", Prix: "55", Couleur:'#2F80ED', Image:'exemple_logement5.png'},
-      {id: 5, Label: "Tiny House", Titre: "Tiny House près de la plage", Prix: "55", Couleur:'#EB5757', Image:'exemple_logement1.png'},
-      {id: 6, Label: "Woofing", Titre: "Ferme tranquille dans les terres", Prix: "55", Couleur:'#F2C94C', Image:'exemple_logement4.png'},
-      {id: 7, Label: "Chambre", Titre: "Super pied à terre à Saint-Malo", Prix: "55", Couleur:'#9B51E0', Image:'exemple_logement1.png'},
-      {id: 8, Label: "Cabane", Titre: "Cabane face à la mer", Prix: "55", Couleur:'#27AE60', Image:'exemple_logement3.png'},
-      {id: 9, Label: "Insolite", Titre: "Super dôme en pleine nature !", Prix: "55", Couleur:'#2F80ED', Image:'exemple_logement5.png'},
+    const listeActivite = [
+      {id: 0, Label: "Plein Air", Titre: "Accrobranche", Prix: "40", Couleur:'#EB5757', Image:'activite1.png'},
+      {id: 1, Label: "Musée", Titre: "Écomusée de la Ferme d’Antan", Prix: "40", Couleur:'#F2C94C', Image:'activite2.png'},
+      {id: 2, Label: "Plein Air", Titre: "Rando-goûter", Prix: "40", Couleur:'#EB5757', Image:'activite3.png'},
+      {id: 3, Label: "Nautisme", Titre: "Aviron", Prix: "40", Couleur:'#27AE60', Image:'activite4.png'},
+      {id: 4, Label: "Cours", Titre: "Atelier compost", Prix: "40", Couleur:'#2F80ED', Image:'activite5.png'},
+      {id: 5, Label: "Plein Air", Titre: "À la découverte du biotope local", Prix: "40", Couleur:'#EB5757', Image:'activite6.png'},
+      {id: 6, Label: "Plein Air", Titre: "Accrobranche", Prix: "40", Couleur:'#EB5757', Image:'activite1.png'},
+      {id: 7, Label: "Musée", Titre: "Écomusée de la Ferme d’Antan", Prix: "40", Couleur:'#9B51E0', Image:'activite2.png'},
+      {id: 8, Label: "Plein Air", Titre: "Rando-goûter", Prix: "40", Couleur:'#EB5757', Image:'activite3.png'},
+      {id: 9, Label: "Nautisme", Titre: "Aviron", Prix: "40", Couleur:'#2F80ED', Image:'activite4.png'},
     ];
     
     let label = null;
@@ -244,7 +184,7 @@ export default defineComponent({
     let prix = null;
     let couleur = 'blue';
     let image: string = '~assets/exemple-logement2.png';
-    let logement = listeLogement.find(x => x.id.toString() == Router.currentRoute.value.params.id);
+    let logement = listeActivite.find(x => x.id.toString() == Router.currentRoute.value.params.id);
     if(logement){
       titre = logement.Titre;
       label = logement.Label;
@@ -254,7 +194,7 @@ export default defineComponent({
     }
 
     return {
-      listeLogement,
+      listeActivite,
       label,
       prix,
       couleur,

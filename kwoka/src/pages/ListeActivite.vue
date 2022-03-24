@@ -9,42 +9,51 @@
         <div class="q-mx-sm" style="font-size: 2em">-</div>
         <div class="q-pt-sm">1 voyageur</div>
       </div>
-      <div class="col-12">15 activités</div>
+      <div class="col-12">9 activités</div>
       <card-activite
         class="col-12 q-my-sm card-logement"
-        @click="voirDetails"
+        :id="0"
+        @click="voirDetails(0)"
       ></card-activite>
       <card-activite
         class="col-12 q-my-sm card-logement"
-        @click="voirDetails"
+        :id="1"
+        @click="voirDetails(1)"
       ></card-activite>
       <card-activite
         class="col-12 q-my-sm card-logement"
-        @click="voirDetails"
+        :id="2"
+        @click="voirDetails(2)"
       ></card-activite
       ><card-activite
         class="col-12 q-my-sm card-logement"
-        @click="voirDetails"
+        :id="3"
+        @click="voirDetails(3)"
       ></card-activite
       ><card-activite
         class="col-12 q-my-sm card-logement"
-        @click="voirDetails"
+        :id="4"
+        @click="voirDetails(4)"
       ></card-activite
       ><card-activite
         class="col-12 q-my-sm card-logement"
-        @click="voirDetails"
+        :id="5"
+        @click="voirDetails(5)"
       ></card-activite
       ><card-activite
         class="col-12 q-my-sm card-logement"
-        @click="voirDetails"
+        :id="6"
+        @click="voirDetails(6)"
       ></card-activite
       ><card-activite
         class="col-12 q-my-sm card-logement"
-        @click="voirDetails"
+        :id="7"
+        @click="voirDetails(7)"
       ></card-activite
       ><card-activite
         class="col-12 q-my-sm card-logement"
-        @click="voirDetails"
+        :id="8"
+        @click="voirDetails(8)"
       ></card-activite>
     </div>
     <div
@@ -80,9 +89,9 @@ export default defineComponent({
     const center = { lat: 40.689247, lng: -74.044502 };
     return {
       center,
-      async voirDetails() {
+      async voirDetails(id:number) {
         // eslint-disable-next-line @typescript-eslint/no-floating-promises
-        await Router.push('/detailsLogement');
+        await Router.push('/detailsActivite/'+id);
       },
     };
   },

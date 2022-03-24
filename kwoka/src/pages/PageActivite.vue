@@ -167,16 +167,16 @@ export default defineComponent({
     setup() {
     const Router = useRouter();
     const listeActivite = [
-      {id: 0, Label: "Plein Air", Titre: "Accrobranche", Prix: "40", Couleur:'#EB5757', Image:'activite1.png'},
-      {id: 1, Label: "Musée", Titre: "Écomusée de la Ferme d’Antan", Prix: "40", Couleur:'#F2C94C', Image:'activite2.png'},
-      {id: 2, Label: "Plein Air", Titre: "Rando-goûter", Prix: "40", Couleur:'#EB5757', Image:'activite3.png'},
-      {id: 3, Label: "Nautisme", Titre: "Aviron", Prix: "40", Couleur:'#27AE60', Image:'activite4.png'},
-      {id: 4, Label: "Cours", Titre: "Atelier compost", Prix: "40", Couleur:'#2F80ED', Image:'activite5.png'},
-      {id: 5, Label: "Plein Air", Titre: "À la découverte du biotope local", Prix: "40", Couleur:'#EB5757', Image:'activite6.png'},
-      {id: 6, Label: "Plein Air", Titre: "Accrobranche", Prix: "40", Couleur:'#EB5757', Image:'activite1.png'},
-      {id: 7, Label: "Musée", Titre: "Écomusée de la Ferme d’Antan", Prix: "40", Couleur:'#9B51E0', Image:'activite2.png'},
-      {id: 8, Label: "Plein Air", Titre: "Rando-goûter", Prix: "40", Couleur:'#EB5757', Image:'activite3.png'},
-      {id: 9, Label: "Nautisme", Titre: "Aviron", Prix: "40", Couleur:'#2F80ED', Image:'activite4.png'},
+      {id: 0, Label: 'Plein Air', Titre: 'Accrobranche', Prix: '40', Couleur:'#EB5757', Image:'activite1.png'},
+      {id: 1, Label: 'Musée', Titre: 'Écomusée de la Ferme d’Antan', Prix: '40', Couleur:'#F2C94C', Image:'activite2.png'},
+      {id: 2, Label: 'Plein Air', Titre: 'Rando-goûter', Prix: '40', Couleur:'#EB5757', Image:'activite3.png'},
+      {id: 3, Label: 'Nautisme', Titre: 'Aviron', Prix: '40', Couleur:'#27AE60', Image:'activite4.png'},
+      {id: 4, Label: 'Cours', Titre: 'Atelier compost', Prix: '40', Couleur:'#2F80ED', Image:'activite5.png'},
+      {id: 5, Label: 'Plein Air', Titre: 'À la découverte du biotope local', Prix: '40', Couleur:'#EB5757', Image:'activite6.png'},
+      {id: 6, Label: 'Plein Air', Titre: 'Accrobranche', Prix: '40', Couleur:'#EB5757', Image:'activite1.png'},
+      {id: 7, Label: 'Musée', Titre: 'Écomusée de la Ferme d’Antan', Prix: '40', Couleur:'#9B51E0', Image:'activite2.png'},
+      {id: 8, Label: 'Plein Air', Titre: 'Rando-goûter', Prix: '40', Couleur:'#EB5757', Image:'activite3.png'},
+      {id: 9, Label: 'Nautisme', Titre: 'Aviron', Prix: '40', Couleur:'#2F80ED', Image:'activite4.png'},
     ];
     
     let label = null;

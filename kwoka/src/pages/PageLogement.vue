@@ -227,16 +227,16 @@ export default defineComponent({
     setup() {
     const Router = useRouter();
     const listeLogement = [
-      {id: 0, Label: "Tiny House", Titre: "Tiny House près de la plage", Prix: "55", Couleur:'#EB5757', Image:'exemple_logement2.png'},
-      {id: 1, Label: "Woofing", Titre: "Ferme tranquille dans les terres", Prix: "55", Couleur:'#F2C94C', Image:'exemple_logement4.png'},
-      {id: 2, Label: "Chambre", Titre: "Super pied à terre à Saint-Malo", Prix: "55", Couleur:'#9B51E0', Image:'exemple_logement1.png'},
-      {id: 3, Label: "Cabane", Titre: "Cabane face à la mer", Prix: "55", Couleur:'#27AE60', Image:'exemple_logement3.png'},
-      {id: 4, Label: "Insolite", Titre: "Super dôme en pleine nature !", Prix: "55", Couleur:'#2F80ED', Image:'exemple_logement5.png'},
-      {id: 5, Label: "Tiny House", Titre: "Tiny House près de la plage", Prix: "55", Couleur:'#EB5757', Image:'exemple_logement1.png'},
-      {id: 6, Label: "Woofing", Titre: "Ferme tranquille dans les terres", Prix: "55", Couleur:'#F2C94C', Image:'exemple_logement4.png'},
-      {id: 7, Label: "Chambre", Titre: "Super pied à terre à Saint-Malo", Prix: "55", Couleur:'#9B51E0', Image:'exemple_logement1.png'},
-      {id: 8, Label: "Cabane", Titre: "Cabane face à la mer", Prix: "55", Couleur:'#27AE60', Image:'exemple_logement3.png'},
-      {id: 9, Label: "Insolite", Titre: "Super dôme en pleine nature !", Prix: "55", Couleur:'#2F80ED', Image:'exemple_logement5.png'},
+      {id: 0, Label: 'Tiny House', Titre: 'Tiny House près de la plage', Prix: '55', Couleur:'#EB5757', Image:'exemple_logement2.png'},
+      {id: 1, Label: 'Woofing', Titre: 'Ferme tranquille dans les terres', Prix: '55', Couleur:'#F2C94C', Image:'exemple_logement4.png'},
+      {id: 2, Label: 'Chambre', Titre: 'Super pied à terre à Saint-Malo', Prix: '55', Couleur:'#9B51E0', Image:'exemple_logement1.png'},
+      {id: 3, Label: 'Cabane', Titre: 'Cabane face à la mer', Prix: '55', Couleur:'#27AE60', Image:'exemple_logement3.png'},
+      {id: 4, Label: 'Insolite', Titre: 'Super dôme en pleine nature !', Prix: '55', Couleur:'#2F80ED', Image:'exemple_logement5.png'},
+      {id: 5, Label: 'Tiny House', Titre: 'Tiny House près de la plage', Prix: '55', Couleur:'#EB5757', Image:'exemple_logement1.png'},
+      {id: 6, Label: 'Woofing', Titre: 'Ferme tranquille dans les terres', Prix: '55', Couleur:'#F2C94C', Image:'exemple_logement4.png'},
+      {id: 7, Label: 'Chambre', Titre: 'Super pied à terre à Saint-Malo', Prix: '55', Couleur:'#9B51E0', Image:'exemple_logement1.png'},
+      {id: 8, Label: 'Cabane', Titre: 'Cabane face à la mer', Prix: '55', Couleur:'#27AE60', Image:'exemple_logement3.png'},
+      {id: 9, Label: 'Insolite', Titre: 'Super dôme en pleine nature !', Prix: '55', Couleur:'#2F80ED', Image:'exemple_logement5.png'},
     ];
     
     let label = null;
